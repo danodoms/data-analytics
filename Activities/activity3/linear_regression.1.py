@@ -73,9 +73,13 @@ def get_nan_column(df):
             return column
     return False
             
-        
 selected_dataset = pd.read_csv('rice-yield-act3.csv')
+# selected_dataset = pd.read_csv('dataset2.csv')
+
+# stores the changes of each process
 df = encode_dataframe(selected_dataset)        
+
+# duplicate dataframe that is used for processing
 df_copy = df
 
 
