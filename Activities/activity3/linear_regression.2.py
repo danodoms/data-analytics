@@ -90,7 +90,8 @@ while(get_nan_column(df)): # use original df
     print('nan column: ', get_nan_column(df)) # use original df
     print('//////////////////////////////////////')
     
-    df_for_model = preserve_no_nan_columns(df) # dataframe with only one nan column, use original df
+    # df_for_model = preserve_no_nan_columns(df) # dataframe with only one nan column, use original df
+    df_for_model = df[['Environmental Conditions', 'Geographical Location', 'Cultural Practices', 'Disease History', 'Disease Surveillance and Monitoring']]
     column_to_predict = get_nan_column(df_for_model) 
     
     
@@ -122,7 +123,7 @@ while(get_nan_column(df)): # use original df
     df[column_to_predict] = df_imputed[column_to_predict]
     
 
-df.to_csv('output_banana.csv')
+df.to_csv('trial_output_banana.csv')
 
 
 # # Standardization
