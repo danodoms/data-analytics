@@ -1,10 +1,9 @@
 import pandas as pd
-import numpy as np
 from scipy import stats
 
-def calculate_anova(df, response):
+
+def calculate_anova(df, target):
     # Define the target variable (response) and get unique levels
-    target = response
     levels = df.columns[df.columns != target]
 
     # Calculate ANOVA for each feature
@@ -49,18 +48,112 @@ def calculate_anova(df, response):
     
     return anova_results
 
-# Load the dataset
-df = pd.read_csv('ytSample.csv')
-# df = pd.read_csv('StudentsPerformance.csv')
-# df = pd.read_csv('House_Rent_Dataset.csv')
 
-# Specify the target variable
-response = 'Salary'
-# response = 'math score'
-# response = 'Rent'
 
-# Calculate ANOVA for each feature
-anova_results = calculate_anova(df, response)
+import seaborn as sns
+import matplotlib.pyplot as plt
+from scipy.stats import kendalltau
 
-# Print the ANOVA results
-print(anova_results)
+def kendall_heatmap(df):
+    """
+    Create a heatmap of Kendall's Tau correlation coefficients for a DataFrame.
+
+    Parameters:
+    df (DataFrame): Input DataFrame.
+
+    Returns:
+    None
+    """
+    # Calculate Kendall's Tau correlation coefficients
+    corr = df.corr(method='kendall')
+
+    # Create a heatmap
+    plt.figure(figsize=(10, 8))
+    sns.heatmap(corr, annot=True, cmap='coolwarm', fmt=".2f", linewidths=0.5)
+    plt.title("Kendall's Tau Correlation Heatmap")
+    plt.show()
+    
+    return corr
+
+
+
+from sklearn.preprocessing import LabelEncoder
+
+def encode(df):
+    """
+    Apply label encoding to categorical columns in a DataFrame.
+
+    Parameters:
+    df (DataFrame): Input DataFrame.
+
+    Returns:
+    DataFrame: DataFrame with categorical columns label encoded.
+    """
+    label_encoder = LabelEncoder()
+    df_encoded = df.copy()  # Create a copy to avoid modifying the original DataFrame
+    
+    # Iterate over each column
+    for column in df_encoded.columns:
+        if df_encoded[column].dtype == 'object':  # Check if the column is categorical
+            df_encoded[column] = label_encoder.fit_transform(df_encoded[column])  # Apply label encoding
+    
+    return df_encoded
+
+
+def correlation_kendall(dataset, threshold):
+    col_corr = set()  # Set of all the names of correlated columns
+    # corr_matrix = dataset.corr(method=method)
+    
+    for i in range(len(dataset.columns)):
+        for j in range(i):
+            if abs(dataset.iloc[i, j]) > threshold: # we are interested in absolute coeff value
+                colname = dataset.columns[i]  # getting the name of column
+                col_corr.add(colname)
+    return col_corr
+
+
+
+def analyze(df, target):
+    print(calculate_anova(df.dropna(), target))
+    encode_df = encode(df)
+    
+    correlation_coefficients_kendall = encode_df.corr(method='kendall')[target]
+    correlation_coefficients_kendall = correlation_coefficients_kendall.drop(target)
+    
+
+    heatmap = kendall_heatmap(encode_df.drop(target, axis=1))
+    corr_features = correlation_kendall(heatmap, 0.49)
+    
+    return correlation_coefficients_kendall, corr_features
+    
+
+
+
+
+# print(calculate_anova(pd.read_csv('ytSample.csv'), 'Salary'))
+# print("\n\n\n")
+# print(calculate_anova(pd.read_csv('StudentsPerformance.csv'), 'math score'))
+# print("\n\n\n")
+# print(calculate_anova(pd.read_csv('House_Rent_Dataset.csv'), 'Rent'))
+# print("\n\n\n")
+# print(calculate_anova(pd.read_csv('top_youtubers.csv'), 'Subscribers (millions)'))
+# print("\n\n\n")
+# print(calculate_anova(pd.read_csv('Salary_Data.csv').dropna(), 'Salary'))
+# print("\n\n\n")
+# print(calculate_anova(pd.read_csv('Housing.csv'), 'price'))
+# print("\n\n\n")
+# print(calculate_anova(pd.read_csv('clothes_price.csv').dropna(), 'Price'))
+# print("\n\n\n")
+# print(calculate_anova(pd.read_csv('flight.csv').dropna(), 'price'))
+# print("\n\n\n")
+# print(calculate_anova(pd.read_csv('pizza.csv').dropna(), 'Price'))
+# print("\n\n\n")
+# print(calculate_anova(pd.read_csv('watch_price.csv').dropna(), 'Price (USD)'))
+
+# kendall_coeff, collinear_x = analyze(pd.read_csv('shoes_price.csv'), 'Price (USD)')
+
+# kendall_coeff, collinear_x = analyze(pd.read_csv('watch_price.csv'), 'Price (USD)')
+
+kendall_coeff, collinear_x = analyze(pd.read_csv('ytSample.csv'), 'Salary')
+
+

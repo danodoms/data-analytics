@@ -1,0 +1,372 @@
+Company,Pizza Name,Type,Size,Price
+Domino's Pizza,Hand Tossed,Cheeses Pizza,"Small (10"")",599
+Domino's Pizza,Hand Tossed,Cheeses Pizza,"Medium (12"")",799
+Domino's Pizza,Hand Tossed,Cheeses Pizza,"Large (14"")",999
+Domino's Pizza,Handmade Pan,Cheeses Pizza,"Medium (12"")",799
+Domino's Pizza,Crunchy Thin Crust,Cheeses Pizza,"Small (10"")",599
+Domino's Pizza,Crunchy Thin Crust,Cheeses Pizza,"Medium (12"")",799
+Domino's Pizza,Crunchy Thin Crust,Cheeses Pizza,"Large (14"")",999
+Domino's Pizza,Brooklyn Style,Cheeses Pizza,"Large (14"")",999
+Domino's Pizza,Brooklyn Style,Cheeses Pizza,"X-Large (16"")",1199
+Domino's Pizza,Gluten Free Crust,Cheeses Pizza,"Small (10"")",899
+Domino's Pizza,Spinach & Feta (Hand Tossed or Thin Crust),Specialty Pizzas,"Small (10"")",1199
+Domino's Pizza,"Spinach & Feta (Hand Tossed, Handmade Pan or Thin Crust)",Specialty Pizzas,"Medium (12"")",1399
+Domino's Pizza,"Spinach & Feta (Hand Tossed, Thin Crust or Brooklyn Style)",Specialty Pizzas,"Large (14"")",1599
+Domino's Pizza,Spinach & Feta (Brooklyn Style),Specialty Pizzas,"X-Large (16"")",1799
+Domino's Pizza,Spinach & Feta (Gluten Free Crust),Specialty Pizzas,"Small (10"")",1499
+Domino's Pizza,Wisconsin 6 Cheese (Hand Tossed or Thin Crust),Specialty Pizzas,"Small (10"")",1199
+Domino's Pizza,"Wisconsin 6 Cheese (Hand Tossed, Handmade Pan or Thin Crust)",Specialty Pizzas,"Medium (12"")",1399
+Domino's Pizza,"Wisconsin 6 Cheese (Hand Tossed, Thin Crust or Brooklyn Style)",Specialty Pizzas,"Large (14"")",1599
+Domino's Pizza,Wisconsin 6 Cheese (Brooklyn Style),Specialty Pizzas,"X-Large (16"")",1799
+Domino's Pizza,Wisconsin 6 Cheese (Gluten Free Crust),Specialty Pizzas,"Small (10"")",1499
+Domino's Pizza,Honolulu Hawaiian (Hand Tossed or Thin Crust),Specialty Pizzas,"Small (10"")",1199
+Domino's Pizza,"Honolulu Hawaiian (Hand Tossed, Handmade Pan or Thin Crust)",Specialty Pizzas,"Medium (12"")",1399
+Domino's Pizza,"Honolulu Hawaiian (Hand Tossed, Thin Crust or Brooklyn Style)",Specialty Pizzas,"Large (14"")",1599
+Domino's Pizza,Honolulu Hawaiian (Brooklyn Style),Specialty Pizzas,"X-Large (16"")",1799
+Domino's Pizza,Honolulu Hawaiian (Gluten Free Crust),Specialty Pizzas,"Small (10"")",1499
+Domino's Pizza,Philly Cheese Steak (Hand Tossed or Thin Crust),Specialty Pizzas,"Small (10"")",1199
+Domino's Pizza,"Philly Cheese Steak (Hand Tossed, Handmade Pan or Thin Crust)",Specialty Pizzas,"Medium (12"")",1399
+Domino's Pizza,"Philly Cheese Steak (Hand Tossed, Thin Crust or Brooklyn Style)",Specialty Pizzas,"Large (14"")",1599
+Domino's Pizza,Philly Cheese Steak (Brooklyn Style),Specialty Pizzas,"X-Large (16"")",1799
+Domino's Pizza,Philly Cheese Steak (Gluten Free Crust),Specialty Pizzas,"Small (10"")",1499
+Domino's Pizza,Pacific Veggie (Hand Tossed or Thin Crust),Specialty Pizzas,"Small (10"")",1199
+Domino's Pizza,"Pacific Veggie (Hand Tossed, Handmade Pan or Thin Crust)",Specialty Pizzas,"Medium (12"")",1399
+Domino's Pizza,"Pacific Veggie (Hand Tossed, Thin Crust or Brooklyn Style)",Specialty Pizzas,"Large (14"")",1599
+Domino's Pizza,Pacific Veggie (Brooklyn Style),Specialty Pizzas,"X-Large (16"")",1799
+Domino's Pizza,Pacific Veggie (Gluten Free Crust),Specialty Pizzas,"Small (10"")",1499
+Domino's Pizza,Cali Chicken Bacon Ranch™ (Hand Tossed or Thin Crust),Specialty Pizzas,"Small (10"")",1199
+Domino's Pizza,"Cali Chicken Bacon Ranch™ (Hand Tossed, Handmade Pan or Thin Crust)",Specialty Pizzas,"Medium (12"")",1399
+Domino's Pizza,"Cali Chicken Bacon Ranch™ (Hand Tossed, Thin Crust or Brooklyn Style)",Specialty Pizzas,"Large (14"")",1599
+Domino's Pizza,Cali Chicken Bacon Ranch™ (Brooklyn Style),Specialty Pizzas,"X-Large (16"")",1799
+Domino's Pizza,Cali Chicken Bacon Ranch™ (Gluten Free Crust),Specialty Pizzas,"Small (10"")",1499
+Domino's Pizza,Fiery Hawaiian™ (Hand Tossed or Thin Crust),Specialty Pizzas,"Small (10"")",1199
+Domino's Pizza,"Fiery Hawaiian™ (Hand Tossed, Handmade Pan or Thin Crust)",Specialty Pizzas,"Medium (12"")",1399
+Domino's Pizza,"Fiery Hawaiian™ (Hand Tossed, Thin Crust or Brooklyn Style)",Specialty Pizzas,"Large (14"")",1599
+Domino's Pizza,Fiery Hawaiian™ (Brooklyn Style),Specialty Pizzas,"X-Large (16"")",1799
+Domino's Pizza,Fiery Hawaiian™ (Gluten Free Crust),Specialty Pizzas,"Small (10"")",1499
+Domino's Pizza,Buffalo Chicken (Hand Tossed or Thin Crust),Specialty Pizzas,"Small (10"")",1199
+Domino's Pizza,"Buffalo Chicken (Hand Tossed, Handmade Pan or Thin Crust)",Specialty Pizzas,"Medium (12"")",1399
+Domino's Pizza,"Buffalo Chicken (Hand Tossed, Thin Crust or Brooklyn Style)",Specialty Pizzas,"Large (14"")",1599
+Domino's Pizza,Buffalo Chicken (Brooklyn Style),Specialty Pizzas,"X-Large (16"")",1799
+Domino's Pizza,Buffalo Chicken (Gluten Free Crust),Specialty Pizzas,"Small (10"")",1499
+Domino's Pizza,Memphis BBQ Chicken (Hand Tossed or Thin Crust),Specialty Pizzas,"Small (10"")",1199
+Domino's Pizza,"Memphis BBQ Chicken (Hand Tossed, Hnadmade Pan or Thin Crust)",Specialty Pizzas,"Medium (12"")",1399
+Domino's Pizza,"Memphis BBQ Chicken (Hand Tossed, Thin Crust or Brooklyn Style)",Specialty Pizzas,"Large (14"")",1599
+Domino's Pizza,Memphis BBQ Chicken (Brooklyn Style),Specialty Pizzas,"X-Large (16"")",1799
+Domino's Pizza,Memphis BBQ Chicken (Gluten Free Crust),Specialty Pizzas,"Small (10"")",1499
+Domino's Pizza,America's Favorite Feast® (Hand Tossed or Thin Crust),Feast Pizzas,"Small (10"")",1199
+Domino's Pizza,America's Favorite Feast® (Hand Tossed or Thin Crust),Feast Pizzas,"Medium (12"")",1399
+Domino's Pizza,America's Favorite Feast® (Handmade Pan),Feast Pizzas,"Medium (12"")",1549
+Domino's Pizza,"America's Favorite Feast® (Hand Tossed, Thin Crust or Brooklyn Style)",Feast Pizzas,"Large (14"")",1599
+Domino's Pizza,America's Favorite Feast® (Brooklyn Style),Feast Pizzas,"X-Large (16"")",1799
+Domino's Pizza,America's Favorite Feast® (Gluten Free Crust),Feast Pizzas,"Small (10"")",1499
+Domino's Pizza,Bacon Cheeseburger Feast® (Hand Tossed or Thin Crust),Feast Pizzas,"Small (10"")",1199
+Domino's Pizza,Bacon Cheeseburger Feast® (Hand Tossed or Thin Crust),Feast Pizzas,"Medium (12"")",1399
+Domino's Pizza,Bacon Cheeseburger Feast® (Handmade Pan),Feast Pizzas,"Medium (12"")",1549
+Domino's Pizza,"Bacon Cheeseburger Feast® (Hand Tossed, Thin Crust or Brooklyn Style)",Feast Pizzas,"Large (14"")",1599
+Domino's Pizza,Bacon Cheeseburger Feast® (Brooklyn Style),Feast Pizzas,"X-Large (16"")",1799
+Domino's Pizza,Bacon Cheeseburger Feast® (Gluten Free Crust),Feast Pizzas,"Small (10"")",1499
+Domino's Pizza,Deluxe Feast® (Hand Tossed or Thin Crust),Feast Pizzas,"Small (10"")",1199
+Domino's Pizza,Deluxe Feast® (Hand Tossed or Thin Crust),Feast Pizzas,"Medium (12"")",1399
+Domino's Pizza,Deluxe Feast® (Handmade Pan),Feast Pizzas,"Medium (12"")",1549
+Domino's Pizza,"Deluxe Feast® (Hand Tossed, Thin Crust or Brooklyn Style)",Feast Pizzas,"Large (14"")",1599
+Domino's Pizza,Deluxe Feast® (Brooklyn Style),Feast Pizzas,"X-Large (16"")",1799
+Domino's Pizza,Deluxe Feast® (Gluten Free Crust),Feast Pizzas,"Small (10"")",1499
+Domino's Pizza,ExtravaganZZa Feast® (Hand Tossed or Thin Crust),Feast Pizzas,"Small (10"")",1199
+Domino's Pizza,"ExtravaganZZa Feast® (Hand Tossed, Handmade Pan or Thin Crust)",Feast Pizzas,"Medium (12"")",1399
+Domino's Pizza,"ExtravaganZZa Feast® (Hand Tossed, Thin Crust or Brooklyn Style)",Feast Pizzas,"Large (14"")",1599
+Domino's Pizza,ExtravaganZZa Feast® (Brooklyn Style),Feast Pizzas,"X-Large (16"")",1799
+Domino's Pizza,ExtravaganZZa Feast® (Gluten Free Crust),Feast Pizzas,"Small (10"")",1499
+Domino's Pizza,MeatZZa Feast® (Hand Tossed or Thin Crust),Feast Pizzas,"Small (10"")",1199
+Domino's Pizza,"MeatZZa Feast® (Hand Tossed, Handmade Pan or Thin Crust)",Feast Pizzas,"Medium (12"")",1399
+Domino's Pizza,"MeatZZa Feast® (Hand Tossed, Thin Crust or Brooklyn Style)",Feast Pizzas,"Large (14"")",1599
+Domino's Pizza,MeatZZa Feast® (Brooklyn Style),Feast Pizzas,"X-Large (16"")",1799
+Domino's Pizza,MeatZZa Feast® (Gluten Free Crust),Feast Pizzas,"Small (10"")",1499
+Domino's Pizza,Ultimate Pepperoni Feast™ (Hand Tossed or Thin Crust),Feast Pizzas,"Small (10"")",1199
+Domino's Pizza,"Ultimate Pepperoni Feast™ (Hand Tossed, Handmade Pan or Thin Crust)",Feast Pizzas,"Medium (12"")",1399
+Domino's Pizza,"Ultimate Pepperoni Feast™ (Hand Tossed, Thin Crust or Brooklyn Style)",Feast Pizzas,"Large (14"")",1599
+Domino's Pizza,Ultimate Pepperoni Feast™ (Brooklyn Style),Feast Pizzas,"X-Large (16"")",1799
+Domino's Pizza,Ultimate Pepperoni Feast™ (Gluten Free Crust),Feast Pizzas,"Small (10"")",1499
+Pizza Hut,Hand-Tossed,Cheese Pizza,Medium,849
+Pizza Hut,Hand-Tossed,Cheese Pizza,Large,1049
+Pizza Hut,Pan Pizza,Cheese Pizza,Personal,429
+Pizza Hut,Pan Pizza,Cheese Pizza,Medium,849
+Pizza Hut,Pan Pizza,Cheese Pizza,Large,1049
+Pizza Hut,Thin N Crispy,Cheese Pizza,Medium,849
+Pizza Hut,Thin N Crispy,Cheese Pizza,Large,1049
+Pizza Hut,Stuffed Crust,Cheese Pizza,Large,1249
+Pizza Hut,Skinny Slice,Cheese Pizza,Large,1049
+Pizza Hut,Pepperoni Lover's® Pizza (Hand-Tossed),Classic Recipe Pizzas,Medium,1249
+Pizza Hut,Pepperoni Lover's® Pizza (Hand-Tossed),Classic Recipe Pizzas,Large,1549
+Pizza Hut,Pepperoni Lover's® Pizza (Pan Pizza),Classic Recipe Pizzas,Personal,479
+Pizza Hut,Pepperoni Lover's® Pizza (Pan Pizza),Classic Recipe Pizzas,Medium,1249
+Pizza Hut,Pepperoni Lover's® Pizza (Pan Pizza),Classic Recipe Pizzas,Large,1549
+Pizza Hut,Pepperoni Lover's® Pizza (Thin N Crispy),Classic Recipe Pizzas,Medium,1249
+Pizza Hut,Pepperoni Lover's® Pizza (Thin N Crispy),Classic Recipe Pizzas,Large,1549
+Pizza Hut,Pepperoni Lover's® Pizza (Stuffed Crust),Classic Recipe Pizzas,Large,1749
+Pizza Hut,Pepperoni Lover's® Pizza (Skinny Slice),Classic Recipe Pizzas,Large,1549
+Pizza Hut,Meat Lover's® Pizza (Hand-Tossed),Classic Recipe Pizzas,Medium,1249
+Pizza Hut,Meat Lover's® Pizza (Hand-Tossed),Classic Recipe Pizzas,Large,1549
+Pizza Hut,Meat Lover's® Pizza (Pan Pizza),Classic Recipe Pizzas,Personal,479
+Pizza Hut,Meat Lover's® Pizza (Pan Pizza),Classic Recipe Pizzas,Medium,1249
+Pizza Hut,Meat Lover's® Pizza (Pan Pizza),Classic Recipe Pizzas,Large,1549
+Pizza Hut,Meat Lover's® Pizza (Thin N Crispy),Classic Recipe Pizzas,Medium,1249
+Pizza Hut,Meat Lover's® Pizza (Thin N Crispy),Classic Recipe Pizzas,Large,1549
+Pizza Hut,Meat Lover's® Pizza (Stuffed Crust),Classic Recipe Pizzas,Large,1749
+Pizza Hut,Meat Lover's® Pizza (Skinny Slice),Classic Recipe Pizzas,Large,1549
+Pizza Hut,Ultimate Cheese Lover's Pizza (Hand-Tossed),Classic Recipe Pizzas,Medium,1249
+Pizza Hut,Ultimate Cheese Lover's Pizza (Hand-Tossed),Classic Recipe Pizzas,Large,1549
+Pizza Hut,Ultimate Cheese Lover's Pizza (Pan Pizza),Classic Recipe Pizzas,Personal,479
+Pizza Hut,Ultimate Cheese Lover's Pizza (Pan Pizza),Classic Recipe Pizzas,Medium,1249
+Pizza Hut,Ultimate Cheese Lover's Pizza (Pan Pizza),Classic Recipe Pizzas,Large,1549
+Pizza Hut,Ultimate Cheese Lover's Pizza (Thin N Crispy),Classic Recipe Pizzas,Medium,1249
+Pizza Hut,Ultimate Cheese Lover's Pizza (Thin N Crispy),Classic Recipe Pizzas,Large,1549
+Pizza Hut,Ultimate Cheese Lover's Pizza (Stuffed Crust),Classic Recipe Pizzas,Large,1749
+Pizza Hut,Ultimate Cheese Lover's Pizza (Skinny Slice),Classic Recipe Pizzas,Large,1549
+Pizza Hut,Veggie Lover's® Pizza (Hand-Tossed),Classic Recipe Pizzas,Medium,1249
+Pizza Hut,Veggie Lover's® Pizza (Hand-Tossed),Classic Recipe Pizzas,Large,1549
+Pizza Hut,Veggie Lover's® Pizza (Pan Pizza),Classic Recipe Pizzas,Personal,479
+Pizza Hut,Veggie Lover's® Pizza (Pan Pizza),Classic Recipe Pizzas,Medium,1249
+Pizza Hut,Veggie Lover's® Pizza (Pan Pizza),Classic Recipe Pizzas,Large,1549
+Pizza Hut,Veggie Lover's® Pizza (Thin N Crispy),Classic Recipe Pizzas,Medium,1249
+Pizza Hut,Veggie Lover's® Pizza (Thin N Crispy),Classic Recipe Pizzas,Large,1549
+Pizza Hut,Veggie Lover's® Pizza (Stuffed Crust),Classic Recipe Pizzas,Large,1749
+Pizza Hut,Veggie Lover's® Pizza (Skinny Slice),Classic Recipe Pizzas,Large,1549
+Pizza Hut,Supreme Pizza (Hand-Tossed),Classic Recipe Pizzas,Medium,1249
+Pizza Hut,Supreme Pizza (Hand-Tossed),Classic Recipe Pizzas,Large,1549
+Pizza Hut,Supreme Pizza (Pan Pizza),Classic Recipe Pizzas,Personal,479
+Pizza Hut,Supreme Pizza (Pan Pizza),Classic Recipe Pizzas,Medium,1249
+Pizza Hut,Supreme Pizza (Pan Pizza),Classic Recipe Pizzas,Large,1549
+Pizza Hut,Supreme Pizza (Thin N Crispy),Classic Recipe Pizzas,Medium,1249
+Pizza Hut,Supreme Pizza (Thin N Crispy),Classic Recipe Pizzas,Large,1549
+Pizza Hut,Supreme Pizza (Stuffed Crust),Classic Recipe Pizzas,Large,1749
+Pizza Hut,Supreme Pizza (Skinny Slice),Classic Recipe Pizzas,Large,1549
+Pizza Hut,BBQ Lover's™ (Hand-Tossed),Classic Recipe Pizzas,Medium,1249
+Pizza Hut,BBQ Lover's™ (Hand-Tossed),Classic Recipe Pizzas,Large,1549
+Pizza Hut,BBQ Lover's™ (Pan Pizza),Classic Recipe Pizzas,Personal,479
+Pizza Hut,BBQ Lover's™ (Pan Pizza),Classic Recipe Pizzas,Medium,1249
+Pizza Hut,BBQ Lover's™ (Pan Pizza),Classic Recipe Pizzas,Large,1549
+Pizza Hut,BBQ Lover's™ (Thin N Crispy),Classic Recipe Pizzas,Medium,1249
+Pizza Hut,BBQ Lover's™ (Thin N Crispy),Classic Recipe Pizzas,Large,1549
+Pizza Hut,BBQ Lover's™ (Stuffed Crust),Classic Recipe Pizzas,Large,1749
+Pizza Hut,BBQ Lover's™ (Skinny Slice),Classic Recipe Pizzas,Large,1549
+Pizza Hut,Chicken Supreme Pizza (Hand-Tossed),Classic Recipe Pizzas,Medium,1349
+Pizza Hut,Chicken Supreme Pizza (Hand-Tossed),Classic Recipe Pizzas,Large,1649
+Pizza Hut,Chicken Supreme Pizza (Pan Pizza),Classic Recipe Pizzas,Personal,529
+Pizza Hut,Chicken Supreme Pizza (Pan Pizza),Classic Recipe Pizzas,Medium,1349
+Pizza Hut,Chicken Supreme Pizza (Pan Pizza),Classic Recipe Pizzas,Large,1649
+Pizza Hut,Chicken Supreme Pizza (Thin N Crispy),Classic Recipe Pizzas,Medium,1349
+Pizza Hut,Chicken Supreme Pizza (Thin N Crispy),Classic Recipe Pizzas,Large,1649
+Pizza Hut,Chicken Supreme Pizza (Stuffed Crust),Classic Recipe Pizzas,Large,1849
+Pizza Hut,Chicken Supreme Pizza (Skinny Slice),Classic Recipe Pizzas,Large,1649
+Pizza Hut,New Primo Meat Pizza (Hand-Tossed),Classic Recipe Pizzas,Medium,1249
+Pizza Hut,New Primo Meat Pizza (Hand-Tossed),Classic Recipe Pizzas,Large,1549
+Pizza Hut,New Primo Meat Pizza (Pan Pizza),Classic Recipe Pizzas,Personal,479
+Pizza Hut,New Primo Meat Pizza (Pan Pizza),Classic Recipe Pizzas,Medium,1249
+Pizza Hut,New Primo Meat Pizza (Pan Pizza),Classic Recipe Pizzas,Large,1549
+Pizza Hut,New Primo Meat Pizza (Thin N Crispy),Classic Recipe Pizzas,Medium,1249
+Pizza Hut,New Primo Meat Pizza (Thin N Crispy),Classic Recipe Pizzas,Large,1549
+Pizza Hut,New Primo Meat Pizza (Stuffed Crust),Classic Recipe Pizzas,Large,1749
+Pizza Hut,New Primo Meat Pizza (Skinny Slice),Classic Recipe Pizzas,Large,1549
+Pizza Hut,Hawaiian Luau (Hand-Tossed),Classic Recipe Pizzas,Medium,1249
+Pizza Hut,Hawaiian Luau (Hand-Tossed),Classic Recipe Pizzas,Large,1549
+Pizza Hut,Hawaiian Luau (Pan Pizza),Classic Recipe Pizzas,Personal,479
+Pizza Hut,Hawaiian Luau (Pan Pizza),Classic Recipe Pizzas,Medium,1249
+Pizza Hut,Hawaiian Luau (Pan Pizza),Classic Recipe Pizzas,Large,1549
+Pizza Hut,Hawaiian Luau (Thin N Crispy),Classic Recipe Pizzas,Medium,1249
+Pizza Hut,Hawaiian Luau (Thin N Crispy),Classic Recipe Pizzas,Large,1549
+Pizza Hut,Hawaiian Luau (Stuffed Crust),Classic Recipe Pizzas,Large,1749
+Pizza Hut,Hawaiian Luau (Skinny Slice),Classic Recipe Pizzas,Large,1549
+Pizza Hut,Super Supreme Pizza (Hand-Tossed),Classic Recipe Pizzas,Medium,1349
+Pizza Hut,Super Supreme Pizza (Hand-Tossed),Classic Recipe Pizzas,Large,1649
+Pizza Hut,Super Supreme Pizza (Pan Pizza),Classic Recipe Pizzas,Personal,529
+Pizza Hut,Super Supreme Pizza (Pan Pizza),Classic Recipe Pizzas,Medium,1349
+Pizza Hut,Super Supreme Pizza (Pan Pizza),Classic Recipe Pizzas,Large,1649
+Pizza Hut,Super Supreme Pizza (Thin N Crispy),Classic Recipe Pizzas,Medium,1349
+Pizza Hut,Super Supreme Pizza (Thin N Crispy),Classic Recipe Pizzas,Large,1649
+Pizza Hut,Super Supreme Pizza (Stuffed Crust),Classic Recipe Pizzas,Large,1849
+Pizza Hut,Super Supreme Pizza (Skinny Slice),Classic Recipe Pizzas,Large,1649
+Pizza Hut,Garden Party™ (Thin N Crispy),New Recipe Pizzas,Medium,1249
+Pizza Hut,Garden Party™ (Thin N Crispy),New Recipe Pizzas,Large,1549
+Pizza Hut,Old Fashioned Meatbrawl™ (Pan Pizza),New Recipe Pizzas,Personal,479
+Pizza Hut,Old Fashioned Meatbrawl™ (Pan Pizza),New Recipe Pizzas,Medium,1249
+Pizza Hut,Old Fashioned Meatbrawl™ (Pan Pizza),New Recipe Pizzas,Large,1549
+Pizza Hut,Cock-a-doodle Bacon™ (Hand-Tossed),New Recipe Pizzas,Medium,1249
+Pizza Hut,Cock-a-doodle Bacon™ (Hand-Tossed),New Recipe Pizzas,Large,1549
+Pizza Hut,Hot and Twisted™ (Hand-Tossed),New Recipe Pizzas,Medium,1249
+Pizza Hut,Hot and Twisted™ (Hand-Tossed),New Recipe Pizzas,Large,1549
+Pizza Hut,Pretzel Piggy™ (Hand-Tossed),New Recipe Pizzas,Medium,1249
+Pizza Hut,Pretzel Piggy™ (Hand-Tossed),New Recipe Pizzas,Large,1549
+Pizza Hut,BBQ Bacon Cheeseburger (Hand-Tossed),New Recipe Pizzas,Medium,1249
+Pizza Hut,BBQ Bacon Cheeseburger (Hand-Tossed),New Recipe Pizzas,Large,1549
+Pizza Hut,Giddy-Up BBQ Chicken™ (Hand-Tossed),New Recipe Pizzas,Medium,1249
+Pizza Hut,Giddy-Up BBQ Chicken™ (Hand-Tossed),New Recipe Pizzas,Large,1549
+Pizza Hut,Buffalo State of Mind™ (Hand-Tossed),New Recipe Pizzas,Medium,1249
+Pizza Hut,Buffalo State of Mind™ (Hand-Tossed),New Recipe Pizzas,Large,1549
+Pizza Hut,Cherry Pepper Bombshell™ (Thin N Crispy),New Recipe Pizzas,Medium,1249
+Pizza Hut,Cherry Pepper Bombshell™ (Thin N Crispy),New Recipe Pizzas,Large,1549
+Pizza Hut,7-Alarm Fire™ (Hand-Tossed),New Recipe Pizzas,Medium,1249
+Pizza Hut,7-Alarm Fire™ (Hand-Tossed),New Recipe Pizzas,Large,1549
+Pizza Hut,Skinny Beach™ (Skinny Slice),Skinny Pizzas,Large,1549
+Pizza Hut,Skinny With A Kick™ (Skinny Slice),Skinny Pizzas,Large,1549
+Pizza Hut,Skinny Italy (Skinny Slice),Skinny Pizzas,Large,1549
+Pizza Hut,Skinny Luau™ (Skinny Slice),Skinny Pizzas,Large,1549
+Pizza Hut,Skinny Club™ (Skinny Slice),Skinny Pizzas,Large,1549
+Pizza Hut,Create Your Own (Gluten-Free Crust),Gluten-Free Pizzas,Small,999
+Godfather's Pizza,Cheese (Original Crust),Cheese Pizza,Mini,499
+Godfather's Pizza,Cheese (Original or Golden Crust),Cheese Pizza,Small,1099
+Godfather's Pizza,"Cheese (Original, Golden or Thin Crust)",Cheese Pizza,Medium,1299
+Godfather's Pizza,Cheese (Mozza-Loaded Crust),Cheese Pizza,Medium,1349
+Godfather's Pizza,"Cheese (Original, Golden or Thin Crust)",Cheese Pizza,Large,1599
+Godfather's Pizza,Cheese (Mozza-Loaded Crust),Cheese Pizza,Large,1649
+Godfather's Pizza,Cheese (Original or Thin Crust),Cheese Pizza,Jumbo,1899
+Godfather's Pizza,All-Meat Combo Pizza (Original Crust),Specialty Pizzas,Mini,599
+Godfather's Pizza,All-Meat Combo Pizza (Original or Golden Crust),Specialty Pizzas,Small,1599
+Godfather's Pizza,"All-Meat Combo Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Medium,1999
+Godfather's Pizza,All-Meat Combo Pizza (Mozza-Loaded Crust),Specialty Pizzas,Medium,2224
+Godfather's Pizza,"All-Meat Combo Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Large,2399
+Godfather's Pizza,All-Meat Combo Pizza (Mozza-Loaded Crust),Specialty Pizzas,Large,2799
+Godfather's Pizza,Bacon Cheeseburger Pizza (Original Crust),Specialty Pizzas,Mini,599
+Godfather's Pizza,Bacon Cheeseburger Pizza (Original or Golden Crust),Specialty Pizzas,Small,1599
+Godfather's Pizza,"Bacon Cheeseburger Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Medium,1999
+Godfather's Pizza,Bacon Cheeseburger Pizza (Mozza-Loaded Crust),Specialty Pizzas,Medium,2224
+Godfather's Pizza,"Bacon Cheeseburger Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Large,2399
+Godfather's Pizza,Bacon Cheeseburger Pizza (Mozza-Loaded Crust),Specialty Pizzas,Large,2623
+Godfather's Pizza,Bacon Cheeseburger Pizza (Original or Thin Crust),Specialty Pizzas,Jumbo,2799
+Godfather's Pizza,Taco Pie Pizza (Original Crust),Specialty Pizzas,Mini,599
+Godfather's Pizza,Taco Pie Pizza (Original or Golden Crust),Specialty Pizzas,Small,1599
+Godfather's Pizza,"Taco Pie Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Medium,1999
+Godfather's Pizza,Taco Pie Pizza (Mozza-Loaded Crust),Specialty Pizzas,Medium,2224
+Godfather's Pizza,"Taco Pie Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Large,2399
+Godfather's Pizza,Taco Pie Pizza (Mozza-Loaded Crust),Specialty Pizzas,Large,2623
+Godfather's Pizza,Taco Pie Pizza (Original or Thin Crust),Specialty Pizzas,Jumbo,2799
+Godfather's Pizza,Classic Combo Pizza (Original Crust),Specialty Pizzas,Mini,599
+Godfather's Pizza,Classic Combo Pizza (Original or Golden Crust),Specialty Pizzas,Small,1599
+Godfather's Pizza,"Classic Combo Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Medium,1999
+Godfather's Pizza,Classic Combo Pizza (Mozza-Loaded Crust),Specialty Pizzas,Medium,2224
+Godfather's Pizza,"Classic Combo Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Large,2399
+Godfather's Pizza,Classic Combo Pizza (Mozza-Loaded Crust),Specialty Pizzas,Large,2623
+Godfather's Pizza,Classic Combo Pizza (Original or Thin Crust),Specialty Pizzas,Jumbo,2799
+Godfather's Pizza,Humble Pie Pizza (Original Crust),Specialty Pizzas,Mini,599
+Godfather's Pizza,Humble Pie Pizza (Original or Golden Crust),Specialty Pizzas,Small,1599
+Godfather's Pizza,"Humble Pie Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Medium,1999
+Godfather's Pizza,Humble Pie Pizza (Mozza-Loaded Crust),Specialty Pizzas,Medium,2224
+Godfather's Pizza,"Humble Pie Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Large,2399
+Godfather's Pizza,Humble Pie Pizza (Mozza-Loaded Crust),Specialty Pizzas,Large,2623
+Godfather's Pizza,Humble Pie Pizza (Original or Thin Crust),Specialty Pizzas,Jumbo,2799
+Godfather's Pizza,Veggie Pie Pizza (Original Crust),Specialty Pizzas,Mini,599
+Godfather's Pizza,Veggie Pie Pizza (Original or Golden Crust),Specialty Pizzas,Small,1599
+Godfather's Pizza,"Veggie Pie Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Medium,1999
+Godfather's Pizza,Veggie Pie Pizza (Mozza-Loaded Crust),Specialty Pizzas,Medium,2224
+Godfather's Pizza,"Veggie Pie Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Large,2399
+Godfather's Pizza,Veggie Pie Pizza (Mozza-Loaded Crust),Specialty Pizzas,Large,2623
+Godfather's Pizza,Veggie Pie Pizza (Original or Thin Crust),Specialty Pizzas,Jumbo,2799
+Godfather's Pizza,Hot Stuff Pizza (Original Crust),Specialty Pizzas,Mini,599
+Godfather's Pizza,Hot Stuff Pizza (Original or Golden Crust),Specialty Pizzas,Small,1599
+Godfather's Pizza,"Hot Stuff Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Medium,1999
+Godfather's Pizza,Hot Stuff Pizza (Mozza-Loaded Crust),Specialty Pizzas,Medium,2224
+Godfather's Pizza,"Hot Stuff Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Large,2399
+Godfather's Pizza,Hot Stuff Pizza (Mozza-Loaded Crust),Specialty Pizzas,Large,2623
+Godfather's Pizza,Hot Stuff Pizza (Original or Thin Crust),Specialty Pizzas,Jumbo,2799
+Godfather's Pizza,Hawaiian Pizza (Original Crust),Specialty Pizzas,Mini,599
+Godfather's Pizza,Hawaiian Pizza (Original or Golden Crust),Specialty Pizzas,Small,1599
+Godfather's Pizza,"Hawaiian Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Medium,1999
+Godfather's Pizza,Hawaiian Pizza (Mozza-Loaded Crust),Specialty Pizzas,Medium,2224
+Godfather's Pizza,"Hawaiian Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Large,2399
+Godfather's Pizza,Hawaiian Pizza (Mozza-Loaded Crust),Specialty Pizzas,Large,2623
+Godfather's Pizza,Hawaiian Pizza (Original or Thin Crust),Specialty Pizzas,Jumbo,2799
+Godfather's Pizza,BLT Pizza (Original Crust),Specialty Pizzas,Mini,599
+Godfather's Pizza,BLT Pizza (Original or Golden Crust),Specialty Pizzas,Small,1599
+Godfather's Pizza,"BLT Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Medium,1999
+Godfather's Pizza,BLT Pizza (Mozza-Loaded Crust),Specialty Pizzas,Medium,2224
+Godfather's Pizza,"BLT Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Large,2399
+Godfather's Pizza,BLT Pizza (Mozza-Loaded Crust),Specialty Pizzas,Large,2623
+Godfather's Pizza,BLT Pizza (Original or Thin Crust),Specialty Pizzas,Jumbo,2799
+Godfather's Pizza,Buffalo Chicken Pizza (Original Crust),Specialty Pizzas,Mini,599
+Godfather's Pizza,Buffalo Chicken Pizza (Original or Golden Crust),Specialty Pizzas,Small,1599
+Godfather's Pizza,"Buffalo Chicken Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Medium,1999
+Godfather's Pizza,Buffalo Chicken Pizza (Mozza-Loaded Crust),Specialty Pizzas,Medium,2224
+Godfather's Pizza,"Buffalo Chicken Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Large,2399
+Godfather's Pizza,Buffalo Chicken Pizza (Mozza-Loaded Crust),Specialty Pizzas,Large,2623
+Godfather's Pizza,Buffalo Chicken Pizza (Original or Thin Crust),Specialty Pizzas,Jumbo,2799
+Godfather's Pizza,Super Combo Pizza (Original or Golden Crust),Specialty Pizzas,Small,1699
+Godfather's Pizza,"Super Combo Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Medium,2199
+Godfather's Pizza,Super Combo Pizza (Mozza-Loaded Crust),Specialty Pizzas,Medium,2249
+Godfather's Pizza,"Super Combo Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Large,2599
+Godfather's Pizza,Super Combo Pizza (Mozza-Loaded Crust),Specialty Pizzas,Large,2649
+Godfather's Pizza,Super Combo Pizza (Original or Thin Crust),Specialty Pizzas,Jumbo,2999
+Godfather's Pizza,Super Hawaiian Pizza (Original or Golden Crust),Specialty Pizzas,Small,1699
+Godfather's Pizza,"Super Hawaiian Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Medium,2199
+Godfather's Pizza,Super Hawaiian Pizza (Mozza-Loaded Crust),Specialty Pizzas,Medium,2249
+Godfather's Pizza,"Super Hawaiian Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Large,2599
+Godfather's Pizza,Super Hawaiian Pizza (Mozza-Loaded Crust),Specialty Pizzas,Large,2649
+Godfather's Pizza,Super Hawaiian Pizza (Original or Thin Crust),Specialty Pizzas,Jumbo,2999
+Godfather's Pizza,Super Taco Pizza (Original or Golden Crust),Specialty Pizzas,Small,1699
+Godfather's Pizza,"Super Taco Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Medium,2199
+Godfather's Pizza,Super Taco Pizza (Mozza-Loaded Crust),Specialty Pizzas,Medium,2249
+Godfather's Pizza,"Super Taco Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Large,2599
+Godfather's Pizza,Super Taco Pizza (Mozza-Loaded Crust),Specialty Pizzas,Large,2649
+Godfather's Pizza,Super Taco Pizza (Original or Thin Crust),Specialty Pizzas,Jumbo,2999
+Godfather's Pizza,The Don (Original or Golden Crust),Specialty Pizzas,Small,1699
+Godfather's Pizza,"The Don (Original, Golden or Thin Crust)",Specialty Pizzas,Medium,2199
+Godfather's Pizza,The Don (Mozza-Loaded Crust),Specialty Pizzas,Medium,2249
+Godfather's Pizza,"The Don (Original, Golden or Thin Crust)",Specialty Pizzas,Large,2599
+Godfather's Pizza,The Don (Mozza-Loaded Crust),Specialty Pizzas,Large,2649
+Godfather's Pizza,The Don (Original or Thin Crust),Specialty Pizzas,Jumbo,2999
+Godfather's Pizza,Super Veggie Pizza (Original or Golden Crust),Specialty Pizzas,Small,1599
+Godfather's Pizza,"Super Veggie Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Medium,2099
+Godfather's Pizza,Super Veggie Pizza (Mozza-Loaded Crust),Specialty Pizzas,Medium,2249
+Godfather's Pizza,"Super Veggie Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Large,2499
+Godfather's Pizza,Super Veggie Pizza (Mozza-Loaded Crust),Specialty Pizzas,Large,2649
+Godfather's Pizza,Super Veggie Pizza (Original or Thin Crust),Specialty Pizzas,Jumbo,2899
+Godfather's Pizza,BBQ Bacon Cheeseburger Pizza (Original Crust),Specialty Pizzas,Mini,599
+Godfather's Pizza,"BBQ Bacon Cheeseburger Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Small,1599
+Godfather's Pizza,"BBQ Bacon Cheeseburger Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Medium,1999
+Godfather's Pizza,BBQ Bacon Cheeseburger Pizza (Mozza-Loaded Crust),Specialty Pizzas,Medium,2224
+Godfather's Pizza,"BBQ Bacon Cheeseburger Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Large,2399
+Godfather's Pizza,BBQ Bacon Cheeseburger Pizza (Mozza-Loaded Crust),Specialty Pizzas,Large,2623
+Godfather's Pizza,"BBQ Bacon Cheeseburger Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Jumbo,2799
+Godfather's Pizza,Chipotle Chicken and Bacon Pizza (Original Crust),Specialty Pizzas,Mini,599
+Godfather's Pizza,"Chipotle Chicken and Bacon Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Small,1599
+Godfather's Pizza,"Chipotle Chicken and Bacon Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Medium,1999
+Godfather's Pizza,Chipotle Chicken and Bacon Pizza (Mozza-Loaded Crust),Specialty Pizzas,Medium,2224
+Godfather's Pizza,"Chipotle Chicken and Bacon Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Large,2399
+Godfather's Pizza,Chipotle Chicken and Bacon Pizza (Mozza-Loaded Crust),Specialty Pizzas,Large,2623
+Godfather's Pizza,"Chipotle Chicken and Bacon Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Jumbo,2799
+Godfather's Pizza,"Margherita Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Medium,999
+Godfather's Pizza,Margherita Pizza (Thin Crust),Specialty Pizzas,Large,1399
+Godfather's Pizza,"Margherita Chicken Pizza (Original, Golden or Thin Crust)",Specialty Pizzas,Medium,1199
+Godfather's Pizza,Margherita Chicken Pizza (Thin Crust),Specialty Pizzas,Large,1599
+Godfather's Pizza,Thin Crust,Gluten-Free Pizzas,Medium,1999
+Godfather's Pizza,Thin Crust,Gluten-Free Pizzas,Large,2399
+Godfather's Pizza,Original Crust,Express Favorites,Mini,499
+Godfather's Pizza,Original or Golden Crust,Express Favorites,Small,1269
+Godfather's Pizza,"Original, Golden or Thin Crust",Express Favorites,Medium,1534
+Godfather's Pizza,Mozza-Loaded Crust,Express Favorites,Medium,1524
+Godfather's Pizza,"Original, Golden or Thin Crust",Express Favorites,Large,1869
+Godfather's Pizza,Mozza-Loaded Crust,Express Favorites,Large,1874
+Godfather's Pizza,Original or Thin Crust,Express Favorites,Jumbo,2199
+IMO's Pizza,Deluxe Pizza,Specialty Pizzas,"Small (10"")",1270
+IMO's Pizza,Deluxe Pizza,Specialty Pizzas,"Medium (12"")",1620
+IMO's Pizza,Deluxe Pizza,Specialty Pizzas,"Large (14"")",1995
+IMO's Pizza,Deluxe Pizza,Specialty Pizzas,"X Large (16"")",2385
+IMO's Pizza,Veggie Pizza,Specialty Pizzas,"Small (10"")",1270
+IMO's Pizza,Veggie Pizza,Specialty Pizzas,"Medium (12"")",1620
+IMO's Pizza,Veggie Pizza,Specialty Pizzas,"Large (14"")",1995
+IMO's Pizza,Veggie Pizza,Specialty Pizzas,"X Large (16"")",2385
+IMO's Pizza,Cheese Pizza,Specialty Pizzas,"Small (10"")",930
+IMO's Pizza,Cheese Pizza,Specialty Pizzas,"Medium (12"")",1160
+IMO's Pizza,Cheese Pizza,Specialty Pizzas,"Large (14"")",1445
+IMO's Pizza,Cheese Pizza,Specialty Pizzas,"X Large (16"")",1735
+IMO's Pizza,All Meat Pizza,Specialty Pizzas,"Small (10"")",1270
+IMO's Pizza,All Meat Pizza,Specialty Pizzas,"Medium (12"")",1620
+IMO's Pizza,All Meat Pizza,Specialty Pizzas,"Large (14"")",1995
+IMO's Pizza,All Meat Pizza,Specialty Pizzas,"X Large (16"")",2385
+IMO's Pizza,BBQ Chicken Pizza,Specialty Pizzas,"Small (10"")",1270
+IMO's Pizza,BBQ Chicken Pizza,Specialty Pizzas,"Medium (12"")",1620
+IMO's Pizza,BBQ Chicken Pizza,Specialty Pizzas,"Large (14"")",1920
+IMO's Pizza,BBQ Chicken Pizza,Specialty Pizzas,"X Large (16"")",2385
+IMO's Pizza,Egg-Ceptional Pizza,Specialty Pizzas,"Small (10"")",1180
+IMO's Pizza,Egg-Ceptional Pizza,Specialty Pizzas,"Medium (12"")",1495
+IMO's Pizza,Egg-Ceptional Pizza,Specialty Pizzas,"Large (14"")",1865
+IMO's Pizza,Egg-Ceptional Pizza,Specialty Pizzas,"X Large (16"")",2230
