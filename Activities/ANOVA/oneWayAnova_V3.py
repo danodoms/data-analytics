@@ -50,6 +50,28 @@ def calculate_anova(df, target):
 
 
 
+from scipy.stats import f_oneway
+
+def anova_using_scipy(data, target):
+    """
+    Performs one-way ANOVA for each feature in the dataset with respect to the target variable.
+
+    Parameters:
+    data (DataFrame): The input data where rows are samples and columns are features.
+    target (array-like): The target variable.
+
+    Returns:
+    dict: A dictionary containing feature names as keys and corresponding p-values as values.
+    """
+    p_values = {}
+    for feature in data.columns:
+        groups = [data[data[feature] == category][target] for category in data[feature].unique()]
+        _, p_value = f_oneway(*groups)
+        p_values[feature] = p_value
+    return p_values
+
+
+
 import seaborn as sns
 import matplotlib.pyplot as plt
 from scipy.stats import kendalltau
@@ -100,7 +122,7 @@ def encode(df):
     return df_encoded
 
 
-def correlation_kendall(dataset, threshold):
+def collinearity_kendall(dataset, threshold):
     col_corr = set()  # Set of all the names of correlated columns
     # corr_matrix = dataset.corr(method=method)
     
@@ -114,46 +136,62 @@ def correlation_kendall(dataset, threshold):
 
 
 def analyze(df, target):
-    print(calculate_anova(df.dropna(), target))
+    # encode df for kendall and heatmap
     encode_df = encode(df)
     
-    correlation_coefficients_kendall = encode_df.corr(method='kendall')[target]
-    correlation_coefficients_kendall = correlation_coefficients_kendall.drop(target)
+    """
+    X to Y feature selection
+    """
+    print(calculate_anova(df.dropna(), target))
     
+    # compute kendall coefficients then drop y column
+    correlation_coefficients_kendall = encode_df.corr(method='kendall')[target].drop(target)
+    
+    
+    """
+    X to X feature selection
+    """
+    # generate heatmap to visualize collinear x features
+    heatmap = kendall_heatmap(encode_df.drop(target, axis=1)) 
+    
+    # identify collinear x features
+    corr_features = collinearity_kendall(heatmap, 0.49)
 
-    heatmap = kendall_heatmap(encode_df.drop(target, axis=1))
-    corr_features = correlation_kendall(heatmap, 0.49)
-    
+
     return correlation_coefficients_kendall, corr_features
-    
 
 
 
+# Datasets, analyze dataset by uncommenting the line
 
-# print(calculate_anova(pd.read_csv('ytSample.csv'), 'Salary'))
-# print("\n\n\n")
-# print(calculate_anova(pd.read_csv('StudentsPerformance.csv'), 'math score'))
-# print("\n\n\n")
-# print(calculate_anova(pd.read_csv('House_Rent_Dataset.csv'), 'Rent'))
-# print("\n\n\n")
-# print(calculate_anova(pd.read_csv('top_youtubers.csv'), 'Subscribers (millions)'))
-# print("\n\n\n")
-# print(calculate_anova(pd.read_csv('Salary_Data.csv').dropna(), 'Salary'))
-# print("\n\n\n")
-# print(calculate_anova(pd.read_csv('Housing.csv'), 'price'))
-# print("\n\n\n")
-# print(calculate_anova(pd.read_csv('clothes_price.csv').dropna(), 'Price'))
-# print("\n\n\n")
-# print(calculate_anova(pd.read_csv('flight.csv').dropna(), 'price'))
-# print("\n\n\n")
-# print(calculate_anova(pd.read_csv('pizza.csv').dropna(), 'Price'))
-# print("\n\n\n")
-# print(calculate_anova(pd.read_csv('watch_price.csv').dropna(), 'Price (USD)'))
-
-# kendall_coeff, collinear_x = analyze(pd.read_csv('shoes_price.csv'), 'Price (USD)')
 
 # kendall_coeff, collinear_x = analyze(pd.read_csv('watch_price.csv'), 'Price (USD)')
 
-kendall_coeff, collinear_x = analyze(pd.read_csv('ytSample.csv'), 'Salary')
+# kendall_coeff, collinear_x = analyze(pd.read_csv('shoes_price.csv'), 'Price (USD)')
+
+# kendall_coeff, collinear_x = analyze(pd.read_csv('test_scores.csv'), 'pretest')
+
+# kendall_coeff, collinear_x = analyze(pd.read_csv('top_youtubers.csv'), 'Subscribers (millions)')
+
+# kendall_coeff, collinear_x = analyze(pd.read_csv('Housing.csv'), 'price') 
+
+# kendall_coeff, collinear_x = analyze(pd.read_csv('House_Rent_Dataset.csv'), 'Rent') 
+
+# kendall_coeff, collinear_x = analyze(pd.read_csv('Salary_Data.csv'), 'Salary') 
+
+# kendall_coeff, collinear_x = analyze(pd.read_csv('ytSample.csv'), 'Salary')
+
+
+
+
+
+# Verification for ANOVA p value
+# p_values = anova_using_scipy(pd.read_csv('shoes_price.csv'), 'Price (USD)')
+
+# # Print p-values for each feature
+# for feature, p_value in p_values.items():
+#     print(f"P-value for {feature}: {p_value:.6f}")  # Adjust the number of decimal places as needed
+
+
 
 

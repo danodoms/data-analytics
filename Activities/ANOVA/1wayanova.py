@@ -11,12 +11,12 @@ from sklearn.preprocessing import LabelEncoder
 import matplotlib.pyplot as plt
 
 # Define the feature names based on their indices
-# feature_names = ['Sepal Length', 'Sepal Width', 'Petal Length', 'Petal Width']
-feature_names = ['Location', 'Company']
+feature_names = ['Sepal Length', 'Sepal Width', 'Petal Length', 'Petal Width']
+# feature_names = ['Location', 'Company']
 
 # Load the CSV file (assuming "iris.csv" contains the Iris dataset)
-# data = pd.read_csv("iris.csv")
-data = pd.read_csv("ytSample.csv")
+data = pd.read_csv("iris.csv")
+# data = pd.read_csv("ytSample.csv")
 
 # Extract the target variable and features // ASSUMES THAT Y or TARGET COLUMN IS IN LAST INDEX
 y = data.iloc[:, -1].values
