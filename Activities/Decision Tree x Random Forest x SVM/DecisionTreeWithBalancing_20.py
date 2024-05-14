@@ -1,13 +1,13 @@
 import pandas as pd
 
 #load csv
-df = pd.read_csv('drug200.csv')
+df = pd.read_csv('onlinefoods.csv')
 df.head()
 
 #Checking data imbalances
 #split to X(Predictors) and Y(Target)
-x = df.drop(['Drug'], axis=1)
-y = df['Drug']
+x = df.drop(['Feedback'], axis=1)
+y = df['Feedback']
 
 #count instances for every category
 y.value_counts()
@@ -19,7 +19,7 @@ y.value_counts().plot.pie(autopct='%.2f')
 #so convert categorical to numeric values
 from sklearn.preprocessing import LabelEncoder
 label_encoders = {}
-for col_index in [1, 2, 3]:
+for col_index in [1, 2, 3, 4, 5, 8]:
     label_encoders[col_index] = LabelEncoder()
     x.iloc[:, col_index] = label_encoders[col_index].fit_transform(x.iloc[:, col_index])
 
@@ -36,7 +36,7 @@ y_smote_value_counts = pd.Series(y_smote).value_counts()
 # Display chart of Y after SMOTE
 import matplotlib.pyplot as plt
 y_smote_value_counts.plot.pie(autopct='%.2f')
-plt.title('Distribution of Drug Types after SMOTE')
+plt.title('Distribution of Feedback after SMOTE')
 plt.show()
 
 #Tranfer the x_smote and y_smote to inputs and targets
@@ -54,12 +54,12 @@ inputs['Age'] = pd.cut(inputs['Age'], bins=bins, labels=labels, right=False)
 
 # Convert Na_to_K to categorical ranges
 # Define categories for Na_to_K
-bins_na_to_k = [0, 10, 11, 12, 13, float('inf')]  # Include one additional bin edge for values above 13
+bins_na_to_k = [560000, 560025, 560050, 560075, 560100, 560125]  # Include one additional bin edge for values above 13
 #labels_na_to_k = ['0-9', '10-10.9', '11-11.9', '12-12.9', '13 and above']
 labels_na_to_k = ['1', '2', '3', '4', '5']
 
 # Convert Na_to_K values to categories
-inputs['Na_to_K'] = pd.cut(inputs['Na_to_K'], bins=bins_na_to_k, labels=labels_na_to_k, right=False)
+inputs['Pin code'] = pd.cut(inputs['Pin code'], bins=bins_na_to_k, labels=labels_na_to_k, right=False)
 
 #Convert target to numbers
 from sklearn.preprocessing import LabelEncoder
@@ -67,45 +67,37 @@ le_Drug = LabelEncoder()
 target = le_Drug.fit_transform(target)
 
 #Build a model
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score
-
-# Build the Random Forest Model
-# Create an instance of the Random Forest classifier
-model = RandomForestClassifier(n_estimators=100, random_state=42)
+from sklearn import tree
+model = tree.DecisionTreeClassifier()
 
 # Train the model
 from sklearn.model_selection import train_test_split
 # Split the data into training and testing sets
-X = inputs
-y = target
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+x_train, x_test, y_train, y_test = train_test_split(inputs, target, test_size=0.2, random_state=42)
 
-# Fit the Random Forest model to the training data
-model.fit(X_train, y_train)
-
-# Step 6: Make Predictions
-# Use the trained model to make predictions on the testing data
-y_pred = model.predict(X_test)
+model.fit(x_train, y_train)
 
 #Get the accuracy of the model  
-# Evaluate the performance of the model using accuracy score
-accuracy = accuracy_score(y_test, y_pred)
+# Evaluate the model on the testing set
+accuracy = model.score(x_test, y_test)
 print("Accuracy Rating:", accuracy)
 
 #Get the F1 Score of the model
 from sklearn.metrics import f1_score
 
-# Calculate the F1-score
-f1 = f1_score(y_test, y_pred, average='weighted')
-print("F1-score:", f1)
+# Predict on the testing set
+predictions = model.predict(x_test)
+
+# Calculate the F1 score
+f1 = f1_score(y_test, predictions, average='weighted')
+print("F1 Score:", f1)
 
 #Get the precision score
 from sklearn.metrics import precision_score
 
-# Calculate the precision score
-precision = precision_score(y_test, y_pred, average='weighted')
-print("Precision Score:", precision)
+# Calculate the precision
+precision = precision_score(y_test, predictions, average='weighted')
+print("Precision:", precision)
 
 #Show the confusion matrix
 from sklearn.metrics import confusion_matrix
@@ -113,7 +105,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # Calculate the confusion matrix
-conf_matrix = confusion_matrix(y_test, y_pred)
+conf_matrix = confusion_matrix(y_test, predictions)
 
 # Plot the confusion matrix as a heatmap
 plt.figure(figsize=(8, 6))
@@ -126,9 +118,14 @@ plt.show()
 #Calculate the Mean Squares Error
 import numpy as np
 from sklearn.metrics import mean_squared_error
+# Get the predicted probabilities for each class
+probabilities = model.predict_proba(x_test)
 
-# Calculate the Mean Squared Error
-mse = mean_squared_error(y_test, y_pred)
+# Get the index of the class with the highest probability for each sample
+predicted_classes = np.argmax(probabilities, axis=1)
+
+# Calculate the MSE using the predicted classes and true labels
+mse = mean_squared_error(y_test, predicted_classes)
 print("Mean Squared Error:", mse)
 
 #Calculate the Mean Absolute error
@@ -136,53 +133,27 @@ print("Mean Squared Error:", mse)
 from sklearn.metrics import mean_absolute_error
 
 # Calculate the Mean Absolute Error
-mae = mean_absolute_error(y_test, y_pred)
+mae = mean_absolute_error(y_test, predictions)
 print("Mean Absolute Error:", mae)
 
 #visualize the decision tree
-from sklearn.tree import export_graphviz
-import graphviz
+import matplotlib.pyplot as plt
+from sklearn.tree import plot_tree
 
-# Convert y to a pandas Series
-y_series = pd.Series(y)
+# Train the model
+model.fit(x_train, y_train)
 
-# Use the unique() method on the pandas Series
-class_names = y_series.unique()
-
-# Choose one of the decision trees from the Random Forest (e.g., the first tree)
-tree = model.estimators_[0]
-
-# Convert feature names to strings
-feature_names = X.columns.astype(str)
-
-# Convert class names to strings
-class_names = class_names.astype(str)
-
-# Export the decision tree as a DOT file
-dot_data = export_graphviz(tree, out_file=None, 
-                           feature_names=feature_names,  
-                           class_names=class_names,  
-                           filled=True, rounded=True,  
-                           special_characters=True)
-
-tree_index = 0 
-#'C:/Program Files/Graphviz/bin/dot.exe'
-
-import os
-from graphviz import Graph, Source
-
-# Set the path to the 'dot' executable
-os.environ["PATH"] += os.pathsep + 'C:/Program Files/Graphviz/bin/dot.exe'
+# Convert class names to a list
+class_names = le_Drug.classes_.tolist()
 
 # Visualize the decision tree
-graph = Source(dot_data)
-graph.render("random_forest_tree_" + str(tree_index))
-graph.view()  # Display the visualization
+plt.figure(figsize=(200,100))
+plot_tree(model, feature_names=inputs.columns.tolist(), class_names=class_names, filled=True)
+plt.show()
 
 
 #classification report
 from sklearn.metrics import classification_report
-predictions = model.predict(X_test)
 
 print(classification_report(y_test, predictions))
 

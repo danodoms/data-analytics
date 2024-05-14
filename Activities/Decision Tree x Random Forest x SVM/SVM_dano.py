@@ -7,18 +7,18 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Load CSV
-df = pd.read_csv('drug200.csv')
+df = pd.read_csv('onlinefoods.csv')
 
 # Checking data imbalances
-x = df.drop(['Drug'], axis=1)
-y = df['Drug']
+x = df.drop(['Feedback'], axis=1)
+y = df['Feedback']
 
 # Perform data balancing using over-sampling (SMOTE)
 from sklearn.preprocessing import LabelEncoder
 from imblearn.over_sampling import SMOTE
 
 label_encoders = {}
-for col_index in [1, 2, 3]:
+for col_index in [1, 2, 3, 4, 5, 8]:
     label_encoders[col_index] = LabelEncoder()
     x.iloc[:, col_index] = label_encoders[col_index].fit_transform(x.iloc[:, col_index])
 
@@ -35,10 +35,10 @@ bins = [15, 25, 35, 45, 55, 65, 75]
 labels = ['1', '2', '3', '4', '5', '6']
 inputs['Age'] = pd.cut(inputs['Age'], bins=bins, labels=labels, right=False)
 
-# Convert Na_to_K to categorical ranges
-bins_na_to_k = [0, 10, 11, 12, 13, float('inf')]
+# Convert Pin code to categorical ranges
+bins_na_to_k = [560000, 560025, 560050, 560075, 560100, 560125]
 labels_na_to_k = ['1', '2', '3', '4', '5']
-inputs['Na_to_K'] = pd.cut(inputs['Na_to_K'], bins=bins_na_to_k, labels=labels_na_to_k, right=False)
+inputs['Pin code'] = pd.cut(inputs['Pin code'], bins=bins_na_to_k, labels=labels_na_to_k, right=False)
 
 # Convert target to numbers
 le_Drug = LabelEncoder() 
@@ -106,12 +106,12 @@ def plot_decision_boundary(X, y, model):
 
 # Convert data type of "Age" and "Na_to_K" columns to numeric
 X_train['Age'] = pd.to_numeric(X_train['Age'])
-X_train['Na_to_K'] = pd.to_numeric(X_train['Na_to_K'])
+# X_train['Na_to_K'] = pd.to_numeric(X_train['Na_to_K'])
 
 # Plot decision boundary
 plt.figure(figsize=(10, 6))
-plot_decision_boundary(X_train[['Age', 'Na_to_K']], y_train, model)
+# plot_decision_boundary(X_train[['Age', 'Na_to_K']], y_train, model)
 plt.title("Decision Boundary of Support Vector Machine")
 plt.xlabel("Age")
-plt.ylabel("Na_to_K")
+# plt.ylabel("Na_to_K")
 plt.show()
