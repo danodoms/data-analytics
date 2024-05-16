@@ -61,7 +61,7 @@ corr_matrix = df_encoded.corr()
 # Create a heatmap of correlations
 plt.figure(figsize=(12, 10))
 sns.heatmap(corr_matrix, annot=True, cmap='coolwarm', linewidths=0.5)
-plt.title('Correlation Heatmap')
+plt.title('Correlation Heatmap Pearson')
 plt.show()
 
 # Perform chi-square test for each feature
@@ -85,6 +85,9 @@ chi2_df.reset_index(inplace=True)
 
 # Display chi2_df in the variable explorer
 chi2_df
+
+# Sort the DataFrame by "Significance" column
+chi2_df_sorted = chi2_df.sort_values(by='p-value', ascending=True)
 
 # Drop not significant features
 significant_features = [feat for feat, values in feature_significance.items() if values["Significance"] == "Significant"]

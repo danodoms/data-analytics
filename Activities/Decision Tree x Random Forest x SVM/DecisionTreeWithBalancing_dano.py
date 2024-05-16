@@ -46,9 +46,9 @@ target = y_smote
 
 # Convert ages to categorical ranges
 # Define age categories
-bins = [15, 25, 35, 45, 55, 65, 75]
+bins = [17, 22, 26, 29, 34]
 #labels = ['15-24', '25-34', '35-44', '45-54', '55-64', '65-75']
-labels = ['1', '2', '3', '4', '5', '6']
+labels = ['1', '2', '3', '4']
 
 # Convert ages to categories
 inputs['Age'] = pd.cut(inputs['Age'], bins=bins, labels=labels, right=False)

@@ -34,7 +34,7 @@ plt.title("Cramér's V Heatmap")
 plt.show()
 
 # Optional: Drop one feature from pairs of features with high Cramér's V
-threshold = 0.8  # Set a threshold for high association
+threshold = 0.25  # Set a threshold for high association
 to_drop = set()
 for col1 in cramers_v_matrix.columns:
     for col2 in cramers_v_matrix.columns:
