@@ -20,21 +20,23 @@ def bin_numeric_columns(df, binning_info):
     
     return df_binned
 
-def label_encode_columns(df):
+def label_encode_columns(df, exclude_columns=[]):
     """
-    Apply label encoding to all columns of the DataFrame.
+    Apply label encoding to all columns of the DataFrame except the specified columns.
 
     Parameters:
     df (DataFrame): Input DataFrame.
+    exclude_columns (list): List of columns to exclude from label encoding.
 
     Returns:
-    DataFrame: DataFrame with all columns label encoded.
+    DataFrame: DataFrame with specified columns label encoded.
     """
     df_encoded = df.copy()  # Create a copy to avoid modifying the original DataFrame
     label_encoder = LabelEncoder()
     
     for column in df_encoded.columns:
-        df_encoded[column] = label_encoder.fit_transform(df_encoded[column])
+        if column not in exclude_columns:
+            df_encoded[column] = label_encoder.fit_transform(df_encoded[column])
     
     return df_encoded
 
@@ -50,7 +52,7 @@ if __name__ == "__main__":
     # Define binning information
     binning_info = {
         # 'AnnualIncome': ([0, 500000, 1000000, 1500000], ['Low', 'Medium', 'High']),
-        'Age': ([15, 25, 35, 45, 55, 65, 75], ['1', '2', '3', '4', '5', '6']),
+        'Age': ([18, 22, 26, 29, 33], ['1', '2', '3', '4']),
         'Pin code':([560000, 560025, 560050, 560075, 560100, 560125], ['1', '2', '3', '4', '5']),
         # 'latitude':([12.8, 12.9, 13.0, 13.1, 13.2], ['1', '2', '3', '4']),
         # 'longitude':([77.4, 77.5, 77.6, 77.7, 77.8], ['1', '2', '3', '4'])
@@ -73,7 +75,7 @@ if __name__ == "__main__":
     
     
     # Apply label encoding to all columns
-    df_encoded = label_encode_columns(df_binned)
+    df_encoded = label_encode_columns(df_binned, ['Age', 'Pin code'])
     
     print("\nDataFrame with All Columns Label Encoded:")
     print(df_encoded)
