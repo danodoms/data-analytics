@@ -7,10 +7,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Load CSV
-df = pd.read_csv('onlinefoods.csv')
+df = pd.read_csv('data/onlinefoods.csv')
 
 # Checking data imbalances
-x = df.drop(['Feedback'], axis=1)
+x = df.drop(['Feedback', 'Educational Qualifications', 'Family size', 'Gender', 'Pin code'], axis=1)
 y = df['Feedback']
 
 # Perform data balancing using over-sampling (SMOTE)
@@ -18,7 +18,8 @@ from sklearn.preprocessing import LabelEncoder
 from imblearn.over_sampling import SMOTE
 
 label_encoders = {}
-for col_index in [1, 2, 3, 4, 5, 8]:
+# for col_index in [1, 2, 3, 4, 5, 8]:
+for col_index in [ 1, 2, 3, 4]:
     label_encoders[col_index] = LabelEncoder()
     x.iloc[:, col_index] = label_encoders[col_index].fit_transform(x.iloc[:, col_index])
 
@@ -35,10 +36,10 @@ bins = [15, 25, 35, 45, 55, 65, 75]
 labels = ['1', '2', '3', '4', '5', '6']
 inputs['Age'] = pd.cut(inputs['Age'], bins=bins, labels=labels, right=False)
 
-# Convert Pin code to categorical ranges
-bins_na_to_k = [560000, 560025, 560050, 560075, 560100, 560125]
-labels_na_to_k = ['1', '2', '3', '4', '5']
-inputs['Pin code'] = pd.cut(inputs['Pin code'], bins=bins_na_to_k, labels=labels_na_to_k, right=False)
+# # Convert Pin code to categorical ranges
+# bins_na_to_k = [560000, 560025, 560050, 560075, 560100, 560125]
+# labels_na_to_k = ['1', '2', '3', '4', '5']
+# inputs['Pin code'] = pd.cut(inputs['Pin code'], bins=bins_na_to_k, labels=labels_na_to_k, right=False)
 
 # Convert target to numbers
 le_Drug = LabelEncoder() 

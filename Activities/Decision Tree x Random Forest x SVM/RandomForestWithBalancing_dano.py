@@ -1,7 +1,7 @@
 import pandas as pd
 
 #load csv
-df = pd.read_csv('onlinefoods.csv')
+df = pd.read_csv('data/onlinefoods.csv')
 df.head()
 
 #Checking data imbalances
@@ -19,6 +19,7 @@ y.value_counts().plot.pie(autopct='%.2f')
 #so convert categorical to numeric values
 from sklearn.preprocessing import LabelEncoder
 label_encoders = {}
+# for col_index in [1, 2, 3, 4, 5, 10]:
 for col_index in [1, 2, 3, 4, 5, 8]:
     label_encoders[col_index] = LabelEncoder()
     x.iloc[:, col_index] = label_encoders[col_index].fit_transform(x.iloc[:, col_index])
@@ -60,6 +61,18 @@ labels_na_to_k = ['1', '2', '3', '4', '5']
 
 # Convert Na_to_K values to categories
 inputs['Pin code'] = pd.cut(inputs['Pin code'], bins=bins_na_to_k, labels=labels_na_to_k, right=False)
+
+# # Convert latitude to categories
+# bins_latitude = [12.8, 12.9, 13.0, 13.1, 13.2]
+# labels_latitude = ['1', '2', '3', '4']
+# inputs['latitude'] = pd.cut(inputs['latitude'], bins=bins_latitude, labels=labels_latitude, right=False, precision=4)
+
+
+# # Convert latitude to categories
+# bins_longitude = [float('-inf'), 77.4, 77.5, 77.6, 77.7, 77.8, float('inf')]
+# labels_longitude = ['1', '2', '3', '4', '5', '6']
+# inputs['longitude'] = pd.cut(inputs['longitude'], bins=bins_longitude, labels=labels_longitude, right=False, precision=6)
+
 
 #Convert target to numbers
 from sklearn.preprocessing import LabelEncoder

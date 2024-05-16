@@ -165,8 +165,9 @@ def analyze(df, target):
 # Datasets, analyze dataset by uncommenting the line
 
 
-kendall_coeff, collinear_x = analyze(pd.read_csv('onlinefoods.csv'), 'Feedback')
+kendall_coeff, collinear_x = analyze(pd.read_csv('data/onlinefoods_encoded.csv'), 'Feedback')
 
+# kendall_coeff, collinear_x = analyze(pd.read_csv('data/TravelInsurancePrediction_encoded.csv'), 'TravelInsurance')
 
 
 
@@ -178,5 +179,21 @@ kendall_coeff, collinear_x = analyze(pd.read_csv('onlinefoods.csv'), 'Feedback')
 #     print(f"P-value for {feature}: {p_value:.6f}")  # Adjust the number of decimal places as needed
 
 
+import pandas as pd
+from scipy.stats import chi2_contingency
+
+
+# Convert data to DataFrame
+df = pd.DataFrame(pd.read_csv('data/onlinefoods_encoded.csv'))
+
+# Perform chi-square test
+chi2, p, dof, expected = chi2_contingency(df)
+
+# Output results
+print("Chi-square statistic:", chi2)
+print("p-value:", p)
+print("Degrees of freedom:", dof)
+print("Expected frequencies:")
+print(expected)
 
 
