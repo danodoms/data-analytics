@@ -28,6 +28,8 @@ from sklearn.preprocessing import LabelEncoder
 
 df_encoded = pd.read_csv("data/onlinefoods_encoded.csv")
 
+isnull = df_encoded.isnull().sum()
+
 # Split data into X (features) and Y (target variable)
 X = df_encoded.drop('Feedback', axis=1)
 Y = df_encoded['Feedback']

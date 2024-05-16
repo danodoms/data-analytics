@@ -52,7 +52,7 @@ if __name__ == "__main__":
     # Define binning information
     binning_info = {
         # 'AnnualIncome': ([0, 500000, 1000000, 1500000], ['Low', 'Medium', 'High']),
-        'Age': ([18, 22, 26, 29, 33], ['1', '2', '3', '4']),
+        'Age': ([17, 22, 26, 29, 34], ['1', '2', '3', '4']),
         'Pin code':([560000, 560025, 560050, 560075, 560100, 560125], ['1', '2', '3', '4', '5']),
         # 'latitude':([12.8, 12.9, 13.0, 13.1, 13.2], ['1', '2', '3', '4']),
         # 'longitude':([77.4, 77.5, 77.6, 77.7, 77.8], ['1', '2', '3', '4'])
@@ -67,18 +67,26 @@ if __name__ == "__main__":
 
     
 
-    # Bin numeric columns and replace original ones
-    df_binned = bin_numeric_columns(df, binning_info)
-    
-    print("DataFrame with Original Columns Replaced by Binned Ones:")
-    print(df_binned)
+   
     
     
     # Apply label encoding to all columns
-    df_encoded = label_encode_columns(df_binned, ['Age', 'Pin code'])
+    df_encoded = label_encode_columns(df, ['Age', 'Pin code'])
     
     print("\nDataFrame with All Columns Label Encoded:")
     print(df_encoded)
     
+    print(df_encoded.describe())
+    desc = df_encoded.describe()
+    
+    
+    # Bin numeric columns and replace original ones
+    df_binned = bin_numeric_columns(df_encoded, binning_info)
+    
+    print("DataFrame with Original Columns Replaced by Binned Ones:")
+    print(df_binned)
+    
     # Export the encoded DataFrame to a CSV file
-    df_encoded.to_csv('data/onlinefoods_encoded.csv', index=False)
+    df_binned.to_csv('data/onlinefoods_encoded.csv', index=False)
+    
+    
