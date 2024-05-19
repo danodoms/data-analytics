@@ -6,7 +6,7 @@ df.head()
 
 #Checking data imbalances
 #split to X(Predictors) and Y(Target)
-x = df.drop(['Feedback', 'Occupation'], axis=1)
+x = df.drop(['Feedback', 'Pin code', 'Gender', 'Family size'], axis=1)
 y = df['Feedback']
 
 #count instances for every category
@@ -20,7 +20,7 @@ y.value_counts().plot.pie(autopct='%.2f')
 from sklearn.preprocessing import LabelEncoder
 label_encoders = {}
 # for col_index in [0, 1,2,3,4,5,7]:
-for col_index in [1,2,3,4,7]:
+for col_index in [1,2,3,4,5]:
     label_encoders[col_index] = LabelEncoder()
     x.iloc[:, col_index] = label_encoders[col_index].fit_transform(x.iloc[:, col_index])
 
@@ -53,14 +53,14 @@ labels = ['1', '2', '3', '4']
 # Convert ages to categories
 inputs['Age'] = pd.cut(inputs['Age'], bins=bins, labels=labels, right=False)
 
-# Convert Na_to_K to categorical ranges
-# Define categories for Na_to_K
-bins_na_to_k = [560000, 560025, 560050, 560075, 560100, 560125]  # Include one additional bin edge for values above 13
-#labels_na_to_k = ['0-9', '10-10.9', '11-11.9', '12-12.9', '13 and above']
-labels_na_to_k = ['1', '2', '3', '4', '5']
+# # Convert Na_to_K to categorical ranges
+# # Define categories for Na_to_K
+# bins_na_to_k = [560000, 560025, 560050, 560075, 560100, 560125]  # Include one additional bin edge for values above 13
+# #labels_na_to_k = ['0-9', '10-10.9', '11-11.9', '12-12.9', '13 and above']
+# labels_na_to_k = ['1', '2', '3', '4', '5']
 
-# Convert Na_to_K values to categories
-inputs['Pin code'] = pd.cut(inputs['Pin code'], bins=bins_na_to_k, labels=labels_na_to_k, right=False)
+# # Convert Na_to_K values to categories
+# inputs['Pin code'] = pd.cut(inputs['Pin code'], bins=bins_na_to_k, labels=labels_na_to_k, right=False)
 
 # # Convert latitude to categories
 # bins_latitude = [12.8, 12.9, 13.0, 13.1, 13.2]

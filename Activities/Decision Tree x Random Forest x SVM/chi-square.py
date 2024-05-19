@@ -35,39 +35,38 @@ X = df_encoded.drop('Feedback', axis=1)
 Y = df_encoded['Feedback']
 
 # Split data into training and testing sets
-X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=42)
+# X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=42)
 
 # Scale the data using StandardScaler
-scaler = StandardScaler()
-X_train_scaled = scaler.fit_transform(X_train)
-X_test_scaled = scaler.transform(X_test)
+# scaler = StandardScaler()
+# X_scaled = scaler.fit_transform(X)
 
 # Initialize and train the logistic regression model with increased max_iter
 model = LogisticRegression(max_iter=1000)
-model.fit(X_train_scaled, Y_train)
+model.fit(X, Y)
 
 # Make predictions on the test set
-Y_pred = model.predict(X_test_scaled)
+Y_pred = model.predict(X)
 
 # Calculate accuracy and confusion matrix
-accuracy = accuracy_score(Y_test, Y_pred)
-confusion = confusion_matrix(Y_test, Y_pred)
-print("Accuracy:", accuracy)
-print("Confusion Matrix:\n", confusion)
+# accuracy = accuracy_score(Y_test, Y_pred)
+# confusion = confusion_matrix(Y_test, Y_pred)
+# print("Accuracy:", accuracy)
+# print("Confusion Matrix:\n", confusion)
 
 # Calculate correlation matrix
-corr_matrix = df_encoded.corr()
+# corr_matrix = df_encoded.corr()
 
 # Create a heatmap of correlations
-plt.figure(figsize=(12, 10))
-sns.heatmap(corr_matrix, annot=True, cmap='coolwarm', linewidths=0.5)
-plt.title('Correlation Heatmap Pearson')
-plt.show()
+# plt.figure(figsize=(12, 10))
+# sns.heatmap(corr_matrix, annot=True, cmap='coolwarm', linewidths=0.5)
+# plt.title('Correlation Heatmap Pearson')
+# plt.show()
 
 # Perform chi-square test for each feature
 feature_significance = {}
-for col in X_train.columns:
-    contingency_table = pd.crosstab(X_train[col], Y_train)
+for col in X:
+    contingency_table = pd.crosstab(X[col], Y)
     chi2, p_val, _, _ = chi2_contingency(contingency_table)
     feature_significance[col] = {"Significance": "Significant" if p_val < 0.05 else "Not Significant",
                                   "p-value": p_val}

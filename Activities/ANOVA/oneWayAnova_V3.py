@@ -177,7 +177,7 @@ def analyze(df, target):
 
 # kendall_coeff, collinear_x = analyze(pd.read_csv('House_Rent_Dataset.csv'), 'Rent') 
 
-# kendall_coeff, collinear_x = analyze(pd.read_csv('Salary_Data.csv'), 'Salary') 
+kendall_coeff, collinear_x = analyze(pd.read_csv('Salary_Data.csv'), 'Salary') 
 
 # kendall_coeff, collinear_x = analyze(pd.read_csv('ytSample.csv'), 'Salary')
 

@@ -6,7 +6,7 @@ df.head()
 
 #Checking data imbalances
 #split to X(Predictors) and Y(Target)
-x = df.drop(['Feedback', 'Educational Qualifications', 'Family size', 'Gender', 'Pin code'], axis=1)
+x = df.drop(['Feedback', 'Age'], axis=1)
 y = df['Feedback']
 
 #count instances for every category
@@ -21,7 +21,7 @@ from sklearn.preprocessing import LabelEncoder
 label_encoders = {}
 # for col_index in [1, 2, 3, 4, 5, 10]:
 # for col_index in [1, 2, 3, 4, 5, 8]:
-for col_index in [ 1, 2, 3, 4]:
+for col_index in [ 0, 1, 2, 3, 4, 7]:
     label_encoders[col_index] = LabelEncoder()
     x.iloc[:, col_index] = label_encoders[col_index].fit_transform(x.iloc[:, col_index])
 
@@ -45,23 +45,23 @@ plt.show()
 inputs = x_smote
 target = y_smote
 
-# Convert ages to categorical ranges
-# Define age categories
-bins = [15, 25, 35, 45, 55, 65, 75]
-#labels = ['15-24', '25-34', '35-44', '45-54', '55-64', '65-75']
-labels = ['1', '2', '3', '4', '5', '6']
+# # Convert ages to categorical ranges
+# # Define age categories
+# bins = [15, 25, 35, 45, 55, 65, 75]
+# #labels = ['15-24', '25-34', '35-44', '45-54', '55-64', '65-75']
+# labels = ['1', '2', '3', '4', '5', '6']
 
-# Convert ages to categories
-inputs['Age'] = pd.cut(inputs['Age'], bins=bins, labels=labels, right=False)
+# # Convert ages to categories
+# inputs['Age'] = pd.cut(inputs['Age'], bins=bins, labels=labels, right=False)
 
-# # Convert Na_to_K to categorical ranges
-# # Define categories for Na_to_K
-# bins_na_to_k = [560000, 560025, 560050, 560075, 560100, 560125]  # Include one additional bin edge for values above 13
-# labels_na_to_k = ['1', '2', '3', '4', '5']
+# Convert Na_to_K to categorical ranges
+# Define categories for Na_to_K
+bins_na_to_k = [560000, 560025, 560050, 560075, 560100, 560125]  # Include one additional bin edge for values above 13
+#labels_na_to_k = ['0-9', '10-10.9', '11-11.9', '12-12.9', '13 and above']
+labels_na_to_k = ['1', '2', '3', '4', '5']
 
-# # Convert Na_to_K values to categories
-# inputs['Pin code'] = pd.cut(inputs['Pin code'], bins=bins_na_to_k, labels=labels_na_to_k, right=False)
-
+# Convert Na_to_K values to categories
+inputs['Pin code'] = pd.cut(inputs['Pin code'], bins=bins_na_to_k, labels=labels_na_to_k, right=False)
 
 # # Convert latitude to categories
 # bins_latitude = [12.8, 12.9, 13.0, 13.1, 13.2]
