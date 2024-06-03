@@ -1,5 +1,9 @@
 def balance_data(x, y):
     from imblearn.over_sampling import SMOTE
+    import pandas as pd
+    
+    x = pd.DataFrame(x).round().astype(int)
+    
     smote = SMOTE(random_state=42)
     x_smote, y_smote = smote.fit_resample(x, y)
     return x_smote, y_smote
@@ -47,11 +51,11 @@ def tabulize_model_results(model, x_smote, y_smote):
     import pandas as pd
     results = {}
     
-    print(f"\nTraining and evaluating {model}...")
+    # print(f"\nTraining and evaluating {model}...")
     X_train, X_test, y_train, y_test, y_pred = train_model(x_smote, y_smote, model)
     results[model] = evaluate_model(y_test, y_pred)
     
     # Create and display the metrics table
     metrics_df = pd.DataFrame(results).T
     metrics_df.columns = ["Accuracy", "F1-score", "Precision", "Mean Squared Error", "Mean Absolute Error"]
-    print(metrics_df)
+    return metrics_df
