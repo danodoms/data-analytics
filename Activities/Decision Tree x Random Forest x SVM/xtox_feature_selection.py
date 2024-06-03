@@ -28,7 +28,7 @@ for col1 in df_encoded.columns:
 cramers_v_matrix = cramers_v_matrix.astype(float)
 
 # Plot the Cramér's V heatmap
-plt.figure(figsize=(12, 10))
+# plt.figure(figsize=(12, 12))
 sns.heatmap(cramers_v_matrix, annot=True, cmap='coolwarm', linewidths=0.5)
 plt.title("Cramér's V Heatmap")
 plt.show()
