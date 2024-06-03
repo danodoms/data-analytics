@@ -11,6 +11,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from collections import Counter
 
+
+# %% Section1 
+
 # Step 1: Load the Data
 data = pd.read_csv('onlinefoods.csv')
 
@@ -34,6 +37,9 @@ def detect_outliers(df, n, features):
     multiple_outliers = list(k for k, v in outlier_indices.items() if v > n)
     
     return multiple_outliers
+
+# %% Section2
+
 
 # Assume 'Feedback' is the Feedback column name; replace with your actual Feedback column
 features = data.drop(columns=['Feedback']).columns
