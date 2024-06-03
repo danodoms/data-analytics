@@ -3,7 +3,9 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from scipy.stats import chi2_contingency
 
-def cramers_v_analysis(data, target_column='Feedback', threshold=0.25, top_n=5, plot=True, figsize=None):
+
+
+def cramers_v_analysis(data, target_column, threshold=0.6, top_n=5, plot=True, figsize=None):
     """
     Perform Cramér's V analysis on a DataFrame.
 
@@ -24,7 +26,7 @@ def cramers_v_analysis(data, target_column='Feedback', threshold=0.25, top_n=5, 
         confusion_matrix = pd.crosstab(x, y)
         chi2 = chi2_contingency(confusion_matrix)[0]
         n = confusion_matrix.sum().sum()
-        return chi2 / (n * (min(confusion_matrix.shape) - 1)) ** 0.5
+        return (chi2 / (n * (min(confusion_matrix.shape) - 1))) ** 0.5
 
     # Calculate Cramér's V for all pairs of features
     cramers_v_matrix = pd.DataFrame(index=data.columns, columns=data.columns)
@@ -37,7 +39,7 @@ def cramers_v_analysis(data, target_column='Feedback', threshold=0.25, top_n=5, 
     if plot:
         if figsize:
             plt.figure(figsize=figsize)
-        sns.heatmap(cramers_v_matrix.astype(float), annot=True, cmap='coolwarm', linewidths=0.5)
+        sns.heatmap(cramers_v_matrix.astype(float), annot=True, cmap='coolwarm', linewidths=0.5, vmin=0, vmax=1)
         plt.title("Cramér's V Heatmap")
         plt.show()
 
@@ -57,6 +59,50 @@ def cramers_v_analysis(data, target_column='Feedback', threshold=0.25, top_n=5, 
     return top_features, remaining_features
 
 # Example usage:
-# top_features, remaining_features = cramers_v_analysis(df_encoded, figsize=(12, 10))
-# print("Top features with high Cramér's V scores:", top_features)
-# print("Remaining features:", remaining_features.columns)
+# data = pd.read_csv('data/your_data.csv')
+# top_features, remaining_features = cramers_v_analysis(data, 'target_column', threshold=0.25, top_n=5, plot=True, figsize=(12, 10))
+
+
+
+
+
+
+def chi2_feature_significance(data, target, significance_threshold=0.05):
+    """
+    Calculate chi-square feature significance for each feature in the dataset.
+
+    Parameters:
+    data (DataFrame): Input DataFrame containing features and target variable.
+    target (str): Name of the target variable column.
+    significance_threshold (float): Threshold for significance.
+
+    Returns:
+    DataFrame: DataFrame containing feature significance and p-values, sorted by significance value.
+    """
+
+    # Split data into features (X) and target variable (Y)
+    X = data.drop(target, axis=1)
+    Y = data[target]
+
+    # Perform chi-square test for each feature
+    feature_significance = {}
+    for col in X:
+        contingency_table = pd.crosstab(X[col], Y)
+        chi2, p_val, _, _ = chi2_contingency(contingency_table)
+        significance = "Significant" if p_val < significance_threshold else "Not Significant"
+        feature_significance[col] = {"Significance": significance, "p-value": p_val}
+
+    # Create DataFrame to store chi-square test results
+    chi2_df = pd.DataFrame(feature_significance).T
+    chi2_df.index.name = 'Feature'
+    chi2_df.reset_index(inplace=True)
+
+    # Sort DataFrame by significance value
+    chi2_df_sorted = chi2_df.sort_values(by='p-value', ascending=True)
+
+    return chi2_df_sorted
+
+# Example usage:
+# chi2_results = chi2_feature_significance(df_encoded, 'Feedback', significance_threshold=0.05)
+# print(chi2_results)
+
