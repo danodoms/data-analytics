@@ -47,15 +47,14 @@ def evaluate_model(y_test, y_pred):
 
 
 
-def tabulize_model_results(model, x_smote, y_smote):
+def tabulize_model_results(model, model_name, x_smote, y_smote):
     import pandas as pd
     results = {}
     
-    # print(f"\nTraining and evaluating {model}...")
     X_train, X_test, y_train, y_test, y_pred = train_model(x_smote, y_smote, model)
-    results[model] = evaluate_model(y_test, y_pred)
+    results[model_name] = evaluate_model(y_test, y_pred)
     
-    # Create and display the metrics table
+    # Create and return the metrics table
     metrics_df = pd.DataFrame(results).T
     metrics_df.columns = ["Accuracy", "F1-score", "Precision", "Mean Squared Error", "Mean Absolute Error"]
     return metrics_df
